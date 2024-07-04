@@ -25,7 +25,12 @@ pip install -r requirements.txt
 1. **Run the script:**
 python ebay_scraper.py
 
-2. **Output:**
+2. **Adjust scraping parameters (optional):** 
+Modify the range in ebay_scraper.py to scrape more pages if needed:
+for j in range(1, 10):  # Adjust the range as per your requirement
+
+
+4. **Output:**
 The script will scrape eBay for mobile phone listings and store the data in Mobiles_Data.csv.
 
 ## Contributing
