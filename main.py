@@ -7,7 +7,7 @@ reviews = []
 description = []
 
 for j in range(1,10):
-  url = f"https://www.ebay.com/sch/i.html?_from=R40&_nkw=phone&_sacat=0&_pgn={j}"
+  url = f"https://www.ebay.com/sch/i.html?_from=R40&_nkw=mobile&_sacat=0&_pgn={j}"
 
   r = requests.get(url)
       # print(r)
@@ -25,7 +25,6 @@ for j in range(1,10):
       product_name.append(name)
 
   # print(len(product_name))
-
 
 
   prices = soup.find_all("span",class_ = "s-item__price")
@@ -50,6 +49,5 @@ Price = Price[:min_length]
 description = description[:min_length]
 df = pd.DataFrame({"Product Name":product_name,"Prices":Price,"Decription":description})
 print(df)
-
 
 df.to_csv("Mobiles_Data.csv")
